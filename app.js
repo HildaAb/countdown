@@ -17,10 +17,13 @@ function updateCountdown() {
   const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
   console.log(days, hours, minutes, seconds);
+
+  daysEl.innerHTML = days;
+  hoursEl.innerHTML = hours;
+  minsEl.innerHTML = minutes;
+  secondsEl.innerHTML = seconds;
 }
 
-// Uppdatera nedräkningen varje sekund
 setInterval(updateCountdown, 1000);
 
-// Initial uppdatering
 updateCountdown();
