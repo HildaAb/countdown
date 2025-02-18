@@ -19,9 +19,13 @@ function updateCountdown() {
   console.log(days, hours, minutes, seconds);
 
   daysEl.innerHTML = days;
-  hoursEl.innerHTML = hours;
-  minsEl.innerHTML = minutes;
-  secondsEl.innerHTML = seconds;
+  hoursEl.innerHTML = formatTime(hours);
+  minsEl.innerHTML = formatTime(minutes);
+  secondsEl.innerHTML = formatTime(seconds);
+}
+
+function formatTime(time) {
+  return time < 10 ? `0${time}` : time;
 }
 
 setInterval(updateCountdown, 1000);
