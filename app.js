@@ -6,7 +6,7 @@ const secondsEl = document.getElementById("seconds");
 function updateCountdown() {
   const now = new Date();
   const nextYear = now.getFullYear() + 1;
-  const newYear = new Date(`January 1, ${nextYear} 00:00:00`);
+  const newYear = new Date(`january 1, ${nextYear} 00:00:00`);
   const timeDifference = newYear - now;
 
   const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
